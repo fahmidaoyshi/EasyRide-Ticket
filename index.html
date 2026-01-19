@@ -10,11 +10,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="https://kit.fontawesome.com/c68dad9641.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="./img/bus-icon.png" type="image/x-icon">
-  <style>
-    .seat-btn{
-      @apply btn btn-sm bg-[#F7F8F8] text-gray-600 rounded-lg w-12 hover:bg-green-400 hover:text-white;
-    }
-  </style>
 </head>
 
 <body>
@@ -38,7 +33,7 @@
             </ul>
           </div>
           <div>
-            <img src="./img/EasyTicket (2).png" alt="" width="200" height="20">
+            <h5 class="font-bold text-3xl italic tracking-wide"> Easy<span class="text-green-400">Ride</span></h5>
           </div>
         </div>
 
@@ -156,7 +151,7 @@
                 </div>
             </div>
             <div class="text-center mt-12">
-                <button class="border border-primary text-primary font-bold px-8 py-4 rounded-xl hover:bg-primary hover:text-white transition-all">See All Offers</button>
+                <button class="border border-green-500 text-green-400 font-bold px-8 py-4 rounded-xl hover:bg-lime-100 hover:text-green-500 transition-all">See All Offers</button>
             </div>
         </section>
 <!-- seat booking -->
@@ -314,7 +309,7 @@
   <!-- Already Selected Modal -->
   <dialog id="bookedModal" class="modal">
     <div class="modal-box text-center">
-      <h3 class="font-bold text-red-500">Already Selected</h3>
+      <h3 class="font-bold text-red-500">Already Booked</h3>
       <form method="dialog">
         <button class="btn mt-3">OK</button>
       </form>
