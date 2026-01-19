@@ -10,6 +10,11 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="https://kit.fontawesome.com/c68dad9641.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="./img/bus-icon.png" type="image/x-icon">
+  <style>
+  .seat-btn{
+    @apply btn btn-sm bg-[#F7F8F8] text-gray-600 rounded-lg w-12 hover:bg-green-400 hover:text-white;
+  }
+</style>
 </head>
 
 <body>
@@ -96,7 +101,7 @@
   </section>
 </body>
   <!-- cards -->
-  <div class="flex flex-col lg:flex-row justify-center absolute gap-6  -mt-16 z-20">
+  <div class="flex flex-col lg:flex-row justify-center absolute left-1/2 -bottom-65 -translate-x-1/2 gap-6 z-20">
                 <div class="bg-white border-b-4 border-green-500 shadow-lg  rounded-3xl p-8 flex items-center gap-4 w-72">
                      <i class="fa-solid fa-users text-green-500 text-2xl"></i>
                     <div>
@@ -120,7 +125,7 @@
                 </div>
             </div>
 </section>
-       <div class="h-15"></div>
+       <div class="h-35"></div>
 <!-- offer -->
 <section class="container mx-auto px-4 lg:px-24 mb-24">
             <h2 class="text-4xl font-bold text-center mb-12">Best offers for you</h2>
@@ -155,7 +160,7 @@
             </div>
         </section>
 <!-- seat booking -->
-<section id="paribahan" class="bg-[#F7F8F8] border-t-2 border-primary rounded-t-[60px] pb-24">
+<section id="paribahan" class="bg-[#F7F8F8] border-t-2 border-green-500 rounded-t-[60px] pb-24">
   <div class="container mx-auto px-4 lg:px-24 pt-24">
     <!-- HEADER -->
     <div class="text-center mb-10">
@@ -165,7 +170,7 @@
       </p>
     </div>
     <!--paribahan card-->
-    <div class="bg-white rounded-3xl p-4 mb-8 flex flex-col items-center lg:flex-row gap-8 shadow-sm">
+    <div class="bg-white p-4 mb-4 flex flex-col items-center lg:flex-row gap-8 shadow-sm">
       <div class="flex-1">
         <div class="flex justify-between items-center  mb-6">
           <div class="flex gap-4 items-center">
@@ -206,143 +211,288 @@
         <p class="text-body">Per Seat</p>
       </div>
     </div>
+    <div class="container mx-auto px-4 lg:px-24 pt-24 flex flex-col lg:flex-row gap-10">
 
-  <div class="bg-white rounded-3xl p-8 grid grid-cols-1 lg:grid-cols-3 gap-8 shadow-sm">
+      <!-- LEFT: Seat Selection -->
+      <div class="lg:flex-2 border-r-0 lg:border-r-2 border-dashed border-gray-300 pr-0 lg:pr-8">
+        <h3 class="text-2xl font-bold mb-6">Select Your Seat</h3>
 
-  <!-- LEFT: Seat Selection -->
-  <div class="lg:col-span-2 border-r-0 lg:border-r-2 border-dashed border-gray-300 pr-0 lg:pr-8">
-    <h3 class="text-2xl font-bold mb-6">Select Your Seat</h3>
+        <!-- Legend -->
+        <div class="flex justify-between border-b border-dashed border-gray-300 pb-4 mb-6 flex-wrap gap-4">
+          <div class="flex gap-2 items-center">
+            <div class="w-4 h-4 bg-green-400 rounded"></div>
+            <span class="font-medium">Available</span>
+          </div>
+          <div class="flex gap-2 items-center">
+            <div class="w-4 h-4 bg-gray-400 rounded"></div>
+            <span class="font-medium">Selected</span>
+          </div>
+          <div class="flex gap-2 items-center">
+            <div class="w-4 h-4 bg-red-500 rounded"></div>
+            <span class="font-medium">Booked</span>
+          </div>
+        </div>
 
-    <!-- Legend -->
-    <div class="flex justify-between border-b border-dashed border-gray-300 pb-4 mb-6">
-      <div class="flex gap-2 items-center">
-        <div class="w-4 h-4 bg-green-400 rounded"></div>
-        <span class="font-medium">Available</span>
-      </div>
-      <div class="flex gap-2 items-center">
-        <div class="w-4 h-4 bg-gray-400 rounded"></div>
-        <span class="font-medium">Selected</span>
-      </div>
+        <!-- Steering / Aisle Icon -->
+        <div class="flex justify-end mb-6">
+          <div class="bg-[#0307121A] px-8 py-3 rounded-xl">
+            <img src="./img/seat-gray.png" class="w-6 h-6 opacity-60"/>
+          </div>
+        </div>
+<!-- Seat Grid Wrapper -->
+<div id="seatGrid" class="space-y-3">
+
+  <!-- Row A -->
+  <div class="flex items-center gap-6">
+    <span class="w-6 font-semibold text-gray-500">A</span>
+    <div class="flex gap-2">
+      <button class="seat-btn">A1</button>
+      <button class="seat-btn">A2</button>
     </div>
-
-    <!-- Steering Icon -->
-    <div class="flex justify-end mb-6">
-      <div class="bg-[#0307121A] px-8 py-3 rounded-xl">
-        <img src="https://img.icons8.com/material-sharp/24/steering-wheel.png" class="w-6 h-6 opacity-60"/>
-      </div>
-    </div>
-
-    <!-- Seat Grid -->
-    <p class="mb-4 font-semibold">You selected <span id="seatCount">0</span> seats</p>
-    <div id="seatGrid" class="grid grid-cols-5 gap-3"></div>
-  </div>
-
-  <!-- RIGHT: Summary & Form -->
-  <div class="lg:col-span-1 pl-0 lg:pl-8 mt-6 lg:mt-0">
-    <h3 class="text-2xl font-bold mb-6">Booking Summary</h3>
-    <div class="bg-[#F7F8F8] rounded-xl p-6 mb-6">
-      <!-- Table -->
-      <table class="w-full text-left mb-4 font-inter">
-        <thead class="border-b border-dashed border-gray-300">
-          <tr>
-            <th>Seat <span id="seat-count" class="bg-primary text-white px-2 rounded-md text-xs">0</span></th>
-            <th class="text-center">Class</th>
-            <th class="text-right">Price</th>
-          </tr>
-        </thead>
-        <tbody id="selected-seats-table"></tbody>
-      </table>
-
-      <!-- Price -->
-      <div class="border-t border-gray-300 pt-2 flex justify-between font-bold text-lg mb-4">
-        <span>Total Price</span>
-        <span>BDT <span id="total-price">0</span></span>
-      </div>
-
-      <!-- Discount -->
-      <div id="discount-container" class="hidden flex justify-between font-bold text-lg mb-4 text-primary">
-        <span>Discount</span>
-        <span>BDT <span id="discount-price">0</span></span>
-      </div>
-
-      <!-- Coupon -->
-      <div class="mb-4">
-        <input id="coupon-code" type="text" placeholder="Have a coupon?" class="flex-1 px-4 py-2 rounded-xl border border-gray-300">
-        <button id="apply-btn" class="bg-primary text-white mt-3 font-bold px-5 py-2 rounded-lg disabled:bg-gray-300">Apply</button>
-      </div>
-
-      <!-- Grand Total -->
-      <div class="flex justify-between font-bold text-lg">
-        <span>Grand Total</span>
-        <span>BDT <span id="grand-total">0</span></span>
-      </div>
-    </div>
-
-    <!-- Passenger Info -->
-    <div class="space-y-4">
-      <input id="passenger-name" type="text" placeholder="Passenger Name*" class="w-full p-4 border border-gray-300 rounded-xl">
-      <input id="phone-number" type="number" placeholder="Phone Number*" class="w-full p-4 border border-gray-300 rounded-xl">
-      <input id="email" type="email" placeholder="Email ID" class="w-full p-4 border border-gray-300 rounded-xl">
-      <button id="next-btn" class="w-full bg-primary text-white font-extrabold py-4 rounded-2xl disabled:bg-gray-300 disabled:cursor-not-allowed">Next</button>
-
-      <div class="flex justify-between text-sm underline pt-4">
-        <a href="#">Terms and Conditions</a>
-        <a href="#">Cancellation Policy</a>
-      </div>
+    <div class="w-8"></div>
+    <div class="flex gap-2">
+      <button class="seat-btn">A3</button>
+      <button class="seat-btn">A4</button>
     </div>
   </div>
+
+  <!-- Row B -->
+  <div class="flex items-center gap-6">
+    <span class="w-6 font-semibold text-gray-500">B</span>
+    <div class="flex gap-2">
+      <button class="seat-btn">B1</button>
+      <button class="seat-btn">B2</button>
+    </div>
+    <div class="w-8"></div>
+    <div class="flex gap-2">
+      <button class="seat-btn">B3</button>
+      <button class="seat-btn">B4</button>
+    </div>
+  </div>
+
+  <!-- Row C -->
+  <div class="flex items-center gap-6">
+    <span class="w-6 font-semibold text-gray-500">C</span>
+    <div class="flex gap-2">
+      <button class="seat-btn">C1</button>
+      <button class="seat-btn">C2</button>
+    </div>
+    <div class="w-8"></div>
+    <div class="flex gap-2">
+      <button class="seat-btn">C3</button>
+      <button class="seat-btn">C4</button>
+    </div>
+  </div>
+
+  <!-- Row D -->
+  <div class="flex items-center gap-6">
+    <span class="w-6 font-semibold text-gray-500">D</span>
+    <div class="flex gap-2">
+      <button class="seat-btn">D1</button>
+      <button class="seat-btn">D2</button>
+    </div>
+    <div class="w-8"></div>
+    <div class="flex gap-2">
+      <button class="seat-btn">D3</button>
+      <button class="seat-btn">D4</button>
+    </div>
+  </div>
+
+  <!-- Row E -->
+  <div class="flex items-center gap-6">
+    <span class="w-6 font-semibold text-gray-500">E</span>
+    <div class="flex gap-2">
+      <button class="seat-btn">E1</button>
+      <button class="seat-btn">E2</button>
+    </div>
+    <div class="w-8"></div>
+    <div class="flex gap-2">
+      <button class="seat-btn">E3</button>
+      <button class="seat-btn">E4</button>
+    </div>
+  </div>
+
+  <!-- Row F -->
+  <div class="flex items-center gap-6">
+    <span class="w-6 font-semibold text-gray-500">F</span>
+    <div class="flex gap-2">
+      <button class="seat-btn">F1</button>
+      <button class="seat-btn">F2</button>
+    </div>
+    <div class="w-8"></div>
+    <div class="flex gap-2">
+      <button class="seat-btn">F3</button>
+      <button class="seat-btn">F4</button>
+    </div>
+  </div>
+
+  <!-- Row G -->
+  <div class="flex items-center gap-6">
+    <span class="w-6 font-semibold text-gray-500">G</span>
+    <div class="flex gap-2">
+      <button class="seat-btn">G1</button>
+      <button class="seat-btn">G2</button>
+    </div>
+    <div class="w-8"></div>
+    <div class="flex gap-2">
+      <button class="seat-btn">G3</button>
+      <button class="seat-btn">G4</button>
+    </div>
+  </div>
+
+  <!-- Row H -->
+  <div class="flex items-center gap-6">
+    <span class="w-6 font-semibold text-gray-500">H</span>
+    <div class="flex gap-2">
+      <button class="seat-btn">H1</button>
+      <button class="seat-btn">H2</button>
+    </div>
+    <div class="w-8"></div>
+    <div class="flex gap-2">
+      <button class="seat-btn">H3</button>
+      <button class="seat-btn">H4</button>
+    </div>
+  </div>
+
+  <!-- Row I -->
+  <div class="flex items-center gap-6">
+    <span class="w-6 font-semibold text-gray-500">I</span>
+    <div class="flex gap-2">
+      <button class="seat-btn">I1</button>
+      <button class="seat-btn">I2</button>
+    </div>
+    <div class="w-8"></div>
+    <div class="flex gap-2">
+      <button class="seat-btn">I3</button>
+      <button class="seat-btn">I4</button>
+    </div>
+  </div>
+
+  <!-- Row J -->
+  <div class="flex items-center gap-6">
+    <span class="w-6 font-semibold text-gray-500">J</span>
+    <div class="flex gap-2">
+      <button class="seat-btn">J1</button>
+      <button class="seat-btn">J2</button>
+    </div>
+    <div class="w-8"></div>
+    <div class="flex gap-2">
+      <button class="seat-btn">J3</button>
+      <button class="seat-btn">J4</button>
+    </div>
+  </div>
+
 </div>
-</div>
+      <!-- RIGHT: Booking Summary & Form -->
+      <div class="lg:flex-1 mt-6 lg:mt-0">
+        <h3 class="text-2xl font-bold mb-6">Booking Summary</h3>
+
+        <!-- Summary Box -->
+        <div class="bg-[#F7F8F8] rounded-xl p-6 mb-6">
+
+          <!-- Selected Seats Table -->
+          <table class="w-full text-left mb-4 font-inter">
+            <thead class="border-b border-dashed border-gray-300">
+              <tr>
+                <th>Seat <span id="seatCount" class="text-white bg-green-400 px-2 rounded-md text-xs">0</span></th>
+                <th class="text-center">Class</th>
+                <th class="text-right">Price</th>
+              </tr>
+            </thead>
+            <tbody id="selected-seats-table"></tbody>
+          </table>
+
+          <!-- Total & Discount -->
+          <div class="border-t border-gray-300 pt-2 flex justify-between font-bold text-lg mb-4">
+            <span>Total Price</span>
+            <span>BDT <span id="total-price">0</span></span>
+          </div>
+
+          <div id="discount-container" class="hidden flex justify-between font-bold text-lg mb-4 text-primary">
+            <span>Discount</span>
+            <span>BDT <span id="discount-price">0</span></span>
+          </div>
+
+          <!-- Coupon -->
+          <div class="mb-4">
+            <input id="coupon-code" type="text" placeholder="Have a coupon?" class="flex-1 px-4 py-2 rounded-xl border border-gray-300 w-full mb-2">
+            <button id="apply-btn" class="bg-primary text-white font-bold px-5 py-2 rounded-lg w-full disabled:bg-gray-300">Apply Coupon</button>
+            <p id="coupon-msg" class="text-red-500 text-sm mt-1 hidden"></p>
+          </div>
+
+          <!-- Grand Total -->
+          <div class="flex justify-between font-bold text-lg">
+            <span>Grand Total</span>
+            <span>BDT <span id="grand-total">0</span></span>
+          </div>
+        </div>
+
+        <!-- Passenger Info -->
+        <div class="space-y-4">
+          <input id="passenger-name" type="text" placeholder="Passenger Name*" class="w-full p-4 border border-gray-300 rounded-xl" required>
+          <input id="phone-number" type="number" placeholder="Phone Number*" class="w-full p-4 border border-gray-300 rounded-xl" required>
+          <input id="email" type="email" placeholder="Email ID" class="w-full p-4 border border-gray-300 rounded-xl">
+          <button id="next-btn" class="w-full bg-primary text-white font-extrabold py-4 rounded-2xl disabled:bg-gray-300 disabled:cursor-not-allowed">Next</button>
+          <div class="flex justify-between text-sm underline pt-4">
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Cancellation Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </section>
-<!-- MODALS -->
-<div id="success-modal" class="fixed inset-0 bg-black/60 hidden justify-center items-center z-50 flex">
-        <div class="bg-white rounded-2xl p-12 text-center max-w-md mx-4 animate-scaleUp">
-            <img src="https://img.icons8.com/color/96/checked--v1.png" class="mx-auto mb-6"/>
-            <h3 class="text-[#27AE60] text-2xl font-bold mb-4 uppercase">Success</h3>
-            <p class="font-bold text-secondary mb-2">Thank you for Booking Our Bus Seats.</p>
-            <p class="text-body text-sm mb-6">We are working hard to find the best service and deals for you. Shortly you will find a confirmation in your email.</p>
-            <button id="continue-btn" class="bg-[#27AE60] text-white font-bold px-12 py-3 rounded-3xl w-full hover:opacity-90 transition-opacity">Continue</button>
-        </div>
+  <!-- Success Modal -->
+  <div id="successModal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box text-center">
+      <img src="https://img.icons8.com/color/96/checked--v1.png" class="mx-auto mb-6"/>
+      <h3 class="text-[#27AE60] text-2xl font-bold mb-4 uppercase">Success</h3>
+      <p class="font-bold text-secondary mb-2">Thank you for Booking Our Bus Seats.</p>
+      <p class="text-body text-sm mb-6">Confirmation will be sent to your email shortly.</p>
+      <button id="continue-btn" class="btn btn-primary w-full">Continue</button>
     </div>
-
-<dialog id="bookedModal" class="modal">
-  <div class="modal-box text-center">
-    <h3 class="font-bold text-red-500">Already Selected</h3>
-    <form method="dialog">
-      <button class="btn mt-3">OK</button>
-    </form>
   </div>
-</dialog>
-<!-- Footer -->
-<footer class="bg-[#030712] text-white py-24 mt-24">
-        <div class="container mx-auto px-4 lg:px-24">
-            <div class="flex flex-col lg:flex-row justify-between items-center border-b border-gray-800 pb-12 mb-8">
-                <div class="mb-8 lg:mb-0 text-center lg:text-left">
-                    <h2 class="text-4xl font-extrabold mb-4">P-Ticket</h2>
-                    <p class="text-white/70 max-w-sm font-inter">P-Ticket is a digital platform to make your daily commuting better.</p>
-                </div>
-                <div class="text-center lg:text-right">
-                    <h4 class="text-xl font-bold mb-4">Download our app</h4>
-                    <div class="border border-white/50 rounded-lg p-2 flex items-center gap-3 cursor-pointer hover:border-primary transition-colors">
-                        <img src="https://img.icons8.com/color/48/google-play.png" alt="Play Store">
-                        <div class="text-left">
-                            <p class="text-[10px] uppercase">Get it on</p>
-                            <h5 class="text-xl font-bold">Google Play</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-col lg:flex-row justify-between items-center text-white/70 text-sm font-inter">
-                <p>@All rights reserved, P-Ticket services limited 2026 by Sourav Biswas</p>
-                <div class="flex gap-8 mt-4 lg:mt-0">
-                    <a href="#" class="hover:text-primary">Terms & condition</a>
-                    <a href="#" class="hover:text-primary">Return & refund policy</a>
-                    <a href="#" class="hover:text-primary">Privacy policy</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-<script src="style.js"></script>
+  <!-- Already Selected Modal -->
+  <dialog id="bookedModal" class="modal">
+    <div class="modal-box text-center">
+      <h3 class="font-bold text-red-500">Already Selected</h3>
+      <form method="dialog">
+        <button class="btn mt-3">OK</button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Footer -->
+  <footer class="bg-[#030712] text-white py-24 mt-12">
+    <div class="container mx-auto px-4 lg:px-24">
+      <div class="flex flex-col lg:flex-row justify-between items-center border-b border-gray-800 pb-12 mb-8">
+        <div class="mb-8 lg:mb-0 text-center lg:text-left">
+          <h2 class="text-4xl font-extrabold mb-4">P-Ticket</h2>
+          <p class="text-white/70 max-w-sm font-inter">P-Ticket is a digital platform to make your daily commuting better.</p>
+        </div>
+        <div class="text-center lg:text-right">
+          <h4 class="text-xl font-bold mb-4">Download our app</h4>
+          <div class="border border-white/50 rounded-lg p-2 flex items-center gap-3 cursor-pointer hover:border-primary transition-colors">
+            <img src="https://img.icons8.com/color/48/google-play.png" alt="Play Store">
+            <div class="text-left">
+              <p class="text-[10px] uppercase">Get it on</p>
+              <h5 class="text-xl font-bold">Google Play</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row justify-between items-center text-white/70 text-sm font-inter">
+        <p>@All rights reserved, P-Ticket services limited 2026 by Sourav Biswas</p>
+        <div class="flex gap-8 mt-4 lg:mt-0">
+          <a href="#" class="hover:text-primary">Terms & condition</a>
+          <a href="#" class="hover:text-primary">Return & refund policy</a>
+          <a href="#" class="hover:text-primary">Privacy policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="style.js"></script>
 </body>
 </html>
