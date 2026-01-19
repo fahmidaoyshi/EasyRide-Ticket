@@ -21,28 +21,42 @@ let selectedSeats = [];
 let bookedSeats = [];
 let discount = 0;
 
-seats.forEach(seat => {
-  seat.className =
-    "seat btn btn-sm w-12 bg-[#F7F8F8] text-gray-600 rounded-lg";
+const rows = ["A","B","C","D","E","F","G","H","I","J"];
 
-  seat.addEventListener("click", () => {
-    const seatName = seat.innerText;
+/* ===== Generate Seats ===== */
+rows.forEach(row => {
+  const label = document.createElement("div");
+  label.innerText = row;
+  label.className = "font-bold";
+  seatGrid.appendChild(label);
 
-    if (seat.classList.contains("bg-green-500")) {
-      // unselect
-      seat.classList.remove("bg-green-500", "text-white");
-      seat.classList.add("bg-[#F7F8F8]", "text-gray-600");
-      selectedSeats = selectedSeats.filter(s => s !== seatName);
-    } else {
-      // select
-      seat.classList.remove("bg-[#F7F8F8]", "text-gray-600");
-      seat.classList.add("bg-green-500", "text-white");
-      selectedSeats.push(seatName);
-    }
-
-    seatCount.innerText = selectedSeats.length;
-  });
+  for (let i = 1; i <= 4; i++) {
+    const seat = `${row}${i}`;
+    const btn = document.createElement("button");
+    btn.innerText = seat;
+    btn.className = "btn btn-sm bg-green-400";
+    btn.onclick = () => toggleSeat(seat, btn);
+    seatGrid.appendChild(btn);
+  }
 });
+
+/* ===== Seat Toggle ===== */
+function toggleSeat(seat, btn) {
+  if (bookedSeats.includes(seat)) {
+    bookedModal.showModal();
+    return;
+  }
+
+  if (selectedSeats.includes(seat)) {
+    selectedSeats = selectedSeats.filter(s => s !== seat);
+    btn.className = "btn btn-sm bg-green-400";
+  } else {
+    selectedSeats.push(seat);
+    btn.className = "btn btn-sm bg-gray-400";
+  }
+  updateUI();
+}
+
 
 const seatLeftEl = document.getElementById("seatLeft");
 let TOTAL_SEATS = 40; 
@@ -128,4 +142,9 @@ nextBtn.onclick = ()=>{
 // Continue Modal
 continueBtn.onclick = ()=>{
   successModal.classList.remove("modal-open");
+};
+
+/* ===== Scroll ===== */
+busBtn.onclick = () => {
+  paribahan.scrollIntoView({ behavior: "smooth" });
 };

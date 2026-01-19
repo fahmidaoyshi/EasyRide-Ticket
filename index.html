@@ -11,10 +11,10 @@
   <script src="https://kit.fontawesome.com/c68dad9641.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="./img/bus-icon.png" type="image/x-icon">
   <style>
-  .seat-btn{
-    @apply btn btn-sm bg-[#F7F8F8] text-gray-600 rounded-lg w-12 hover:bg-green-400 hover:text-white;
-  }
-</style>
+    .seat-btn{
+      @apply btn btn-sm bg-[#F7F8F8] text-gray-600 rounded-lg w-12 hover:bg-green-400 hover:text-white;
+    }
+  </style>
 </head>
 
 <body>
@@ -227,10 +227,6 @@
             <div class="w-4 h-4 bg-gray-400 rounded"></div>
             <span class="font-medium">Selected</span>
           </div>
-          <div class="flex gap-2 items-center">
-            <div class="w-4 h-4 bg-red-500 rounded"></div>
-            <span class="font-medium">Booked</span>
-          </div>
         </div>
 
         <!-- Steering / Aisle Icon -->
@@ -239,150 +235,12 @@
             <img src="./img/seat-gray.png" class="w-6 h-6 opacity-60"/>
           </div>
         </div>
-<!-- Seat Grid Wrapper -->
-<div id="seatGrid" class="space-y-3">
 
-  <!-- Row A -->
-  <div class="flex items-center gap-6">
-    <span class="w-6 font-semibold text-gray-500">A</span>
-    <div class="flex gap-2">
-      <button class="seat-btn">A1</button>
-      <button class="seat-btn">A2</button>
-    </div>
-    <div class="w-8"></div>
-    <div class="flex gap-2">
-      <button class="seat-btn">A3</button>
-      <button class="seat-btn">A4</button>
-    </div>
-  </div>
+       
+   <!-- seat grid -->
+        <div id="seatGrid" class="grid grid-cols-5 gap-3"></div>
+      </div>
 
-  <!-- Row B -->
-  <div class="flex items-center gap-6">
-    <span class="w-6 font-semibold text-gray-500">B</span>
-    <div class="flex gap-2">
-      <button class="seat-btn">B1</button>
-      <button class="seat-btn">B2</button>
-    </div>
-    <div class="w-8"></div>
-    <div class="flex gap-2">
-      <button class="seat-btn">B3</button>
-      <button class="seat-btn">B4</button>
-    </div>
-  </div>
-
-  <!-- Row C -->
-  <div class="flex items-center gap-6">
-    <span class="w-6 font-semibold text-gray-500">C</span>
-    <div class="flex gap-2">
-      <button class="seat-btn">C1</button>
-      <button class="seat-btn">C2</button>
-    </div>
-    <div class="w-8"></div>
-    <div class="flex gap-2">
-      <button class="seat-btn">C3</button>
-      <button class="seat-btn">C4</button>
-    </div>
-  </div>
-
-  <!-- Row D -->
-  <div class="flex items-center gap-6">
-    <span class="w-6 font-semibold text-gray-500">D</span>
-    <div class="flex gap-2">
-      <button class="seat-btn">D1</button>
-      <button class="seat-btn">D2</button>
-    </div>
-    <div class="w-8"></div>
-    <div class="flex gap-2">
-      <button class="seat-btn">D3</button>
-      <button class="seat-btn">D4</button>
-    </div>
-  </div>
-
-  <!-- Row E -->
-  <div class="flex items-center gap-6">
-    <span class="w-6 font-semibold text-gray-500">E</span>
-    <div class="flex gap-2">
-      <button class="seat-btn">E1</button>
-      <button class="seat-btn">E2</button>
-    </div>
-    <div class="w-8"></div>
-    <div class="flex gap-2">
-      <button class="seat-btn">E3</button>
-      <button class="seat-btn">E4</button>
-    </div>
-  </div>
-
-  <!-- Row F -->
-  <div class="flex items-center gap-6">
-    <span class="w-6 font-semibold text-gray-500">F</span>
-    <div class="flex gap-2">
-      <button class="seat-btn">F1</button>
-      <button class="seat-btn">F2</button>
-    </div>
-    <div class="w-8"></div>
-    <div class="flex gap-2">
-      <button class="seat-btn">F3</button>
-      <button class="seat-btn">F4</button>
-    </div>
-  </div>
-
-  <!-- Row G -->
-  <div class="flex items-center gap-6">
-    <span class="w-6 font-semibold text-gray-500">G</span>
-    <div class="flex gap-2">
-      <button class="seat-btn">G1</button>
-      <button class="seat-btn">G2</button>
-    </div>
-    <div class="w-8"></div>
-    <div class="flex gap-2">
-      <button class="seat-btn">G3</button>
-      <button class="seat-btn">G4</button>
-    </div>
-  </div>
-
-  <!-- Row H -->
-  <div class="flex items-center gap-6">
-    <span class="w-6 font-semibold text-gray-500">H</span>
-    <div class="flex gap-2">
-      <button class="seat-btn">H1</button>
-      <button class="seat-btn">H2</button>
-    </div>
-    <div class="w-8"></div>
-    <div class="flex gap-2">
-      <button class="seat-btn">H3</button>
-      <button class="seat-btn">H4</button>
-    </div>
-  </div>
-
-  <!-- Row I -->
-  <div class="flex items-center gap-6">
-    <span class="w-6 font-semibold text-gray-500">I</span>
-    <div class="flex gap-2">
-      <button class="seat-btn">I1</button>
-      <button class="seat-btn">I2</button>
-    </div>
-    <div class="w-8"></div>
-    <div class="flex gap-2">
-      <button class="seat-btn">I3</button>
-      <button class="seat-btn">I4</button>
-    </div>
-  </div>
-
-  <!-- Row J -->
-  <div class="flex items-center gap-6">
-    <span class="w-6 font-semibold text-gray-500">J</span>
-    <div class="flex gap-2">
-      <button class="seat-btn">J1</button>
-      <button class="seat-btn">J2</button>
-    </div>
-    <div class="w-8"></div>
-    <div class="flex gap-2">
-      <button class="seat-btn">J3</button>
-      <button class="seat-btn">J4</button>
-    </div>
-  </div>
-
-</div>
       <!-- RIGHT: Booking Summary & Form -->
       <div class="lg:flex-1 mt-6 lg:mt-0">
         <h3 class="text-2xl font-bold mb-6">Booking Summary</h3>
