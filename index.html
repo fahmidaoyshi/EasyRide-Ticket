@@ -1,102 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyRide</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
- <script src="https://kit.fontawesome.com/c68dad9641.js" crossorigin="anonymous"></script>
- <link rel="shortcut icon" href="./img/bus-icon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyRide</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://kit.fontawesome.com/c68dad9641.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="./img/bus-icon.png" type="image/x-icon">
 </head>
-<body >
+
+<body>
   <!-- Navbar -->
-<section>
+  <section>
     <div class="bg-base-100 shadow-sm">
-  <div class="navbar container mx-auto">
-    <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-      </div>
-      <ul
-        tabindex="-1"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 font-medium mt-3 w-52 p-2 shadow">
-        <li class="text-lg"><a>Home</a></li>
-        <li class="text-lg"><a>About</a></li>
-        <li class="text-lg"><a>Destination</a></li>
-        <li class="text-lg"><a>Search</a></li>
-      </ul>
-    </div>
-    <div>
-        <img src="./img/EasyTicket (2).png" alt="" width="200" height="20">
-    </div>
-  </div>
-  <div class="navbar-center hidden font-medium text-lg lg:flex">
-    <ul class="menu menu-horizontal px-1">
-       <li class="text-gray-700 text-lg"><a>Home</a></li>
-        <li class="text-green-400 text-lg"><a>About</a></li>
-        <li class="text-gray-700 text-lg"><a>Destination</a></li>
-        <li class="text-gray-700 text-lg"><a>Search</a></li>
-    </ul>
-  </div>
-    <div class="navbar-end">
-        <div>
-        <a class="btn btn-primary text-lg text-green-500 rounded-xl bg-lime-100 border-green-500 hover:bg-green-400 hover:text-white ">Bus <i class="fa-solid fa-bus"></i></a>
-  </div>
-  </div>
-</div>
-</section>
-<!--Hero Section-->
-<section class="mt-5">
-  <div class="relative isolate px-6 pt-14 lg:px-8 
-            bg-[url('./img/banner.png')] 
-            bg-cover bg-center bg-no-repeat
-            rounded-4xl overflow-hidden">
+      <div class="navbar container mx-auto">
+        
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 font-medium mt-3 w-52 p-2 shadow">
+              <li class="text-lg"><a>Home</a></li>
+              <li class="text-lg"><a>About</a></li>
+              <li class="text-lg"><a>Destination</a></li>
+              <li class="text-lg"><a>Search</a></li>
+            </ul>
+          </div>
+          <div>
+            <img src="./img/EasyTicket (2).png" alt="" width="200" height="20">
+          </div>
+        </div>
 
-  <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-      class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 
-             -translate-x-1/2 rotate-30 
-             bg-linear-to-tr from-[#ff80b5] to-[#9089fc] 
-             opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75">
-    </div>
-  </div>
-  <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-    <div class="hidden sm:mb-8 sm:flex sm:justify-center">  
-    </div>
+        <div class="navbar-center hidden font-medium text-lg lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li class="text-gray-700 text-lg"><a>Home</a></li>
+            <li class="text-green-400 text-lg"><a>About</a></li>
+            <li class="text-gray-700 text-lg"><a>Destination</a></li>
+            <li class="text-gray-700 text-lg"><a>Search</a></li>
+          </ul>
+        </div>
 
-    <div class="text-center">
-      <h1 class="text-4xl font-semibold sm:font-bold tracking-tight text-white sm:text-5xl">
-       End-To-End Travel With <br> <span class="text-green-400">EasyRide</span>
-      </h1>
+        <div class="navbar-end">
+          <div>
+            <a id="busBtn" class="btn btn-primary text-lg text-green-500 rounded-xl bg-lime-100 border-green-500 hover:bg-green-400 hover:text-white">
+              Bus <i class="fa-solid fa-bus"></i>
+            </a>
+          </div>
+        </div>
 
-      <p class="mt-8 text-lg font-medium text-gray-300 sm:text-xl">
-       Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined experience.
-      </p>
-
-      <div class="mt-10 flex items-center justify-center gap-x-6">
-        <a href="#"
-           class="rounded-md bg-green-400 px-3.5 py-2.5 text-sm font-semibold text-black hover:bg-lime-300">
-          Get started
-        </a>
-        <a href="#" class="text-sm font-semibold text-white">
-          Learn more →
-        </a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div aria-hidden="true"
-       class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-      class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 
-             -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] 
-             opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75">
+  <!-- Hero Section -->
+  <section class="mt-5 m-2">
+    <div class="relative isolate px-6 pt-14 lg:px-8 bg-[url('./img/banner.png')] bg-cover bg-center bg-no-repeat rounded-4xl overflow-hidden">
+
+      <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+        <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" 
+             class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75">
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="hidden sm:mb-8 sm:flex sm:justify-center"></div>
+
+        <div class="text-center">
+          <h1 class="text-4xl font-semibold sm:font-bold tracking-tight text-white sm:text-5xl">
+            End-To-End Travel With <br> 
+            <span class="text-green-400">EasyRide</span>
+          </h1>
+          <p class="mt-8 text-lg font-medium text-gray-300 sm:text-xl">
+            Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined experience.
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="#" class="rounded-md bg-green-400 px-3.5 py-2.5 text-sm font-semibold text-black hover:bg-lime-300">Get started</a>
+            <a href="#" class="text-sm font-semibold text-white">Learn more →</a>
+          </div>
+        </div>
+      </div>
+
+      <div aria-hidden="true" class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+        <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" 
+             class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75">
+        </div>
+      </div>
+
     </div>
-  </div>
-
-</div>
-</section>
+  </section>
 </body>
+  <!-- cards -->
+  <div class="flex flex-col lg:flex-row justify-center absolute gap-6  -mt-16 z-20">
+                <div class="bg-white border-b-4 border-green-500 shadow-lg  rounded-3xl p-8 flex items-center gap-4 w-72">
+                     <i class="fa-solid fa-users text-green-500 text-2xl"></i>
+                    <div>
+                        <h3 class="text-4xl font-bold font-inter">500K+</h3>
+                        <p class="text-body">Registered users</p>
+                    </div>
+                </div>
+      <div class="bg-white border-b-4 border-green-500 shadow-lg rounded-3xl p-8 flex items-center gap-4 w-72">
+                    <i class="fa-solid fa-ticket text-green-500 text-2xl"></i>
+                    <div>
+                        <h3 class="text-4xl font-bold font-inter">1.7 lacks</h3>
+                        <p class="text-body">Tickets sold</p>
+                    </div>
+                </div>
+                <div class="bg-white border-b-4 border-green-500 shadow-lg rounded-3xl p-8 flex items-center gap-4 w-72">
+                     <i class="fa-solid fa-bus text-green-500 text-2xl"></i>
+                    <div>
+                        <h3 class="text-4xl font-bold font-inter">80K+</h3>
+                        <p class="text-body">Rental partners</p>
+                    </div>
+                </div>
+            </div>
+</section>
+       <div class="h-15"></div>
+<!-- offer -->
+<section class="container mx-auto px-4 lg:px-24 mb-24">
+            <h2 class="text-4xl font-bold text-center mb-12">Best offers for you</h2>
+            <div class="flex flex-col lg:flex-row gap-6">
+                <div class="bg-couponOne w-full bg-amber-300 rounded-3xl flex relative overflow-hidden h-52 items-center">
+                    <div class="flex-1 p-10 font-inter">
+                        <h3 class="sm:text-4xl text-xl font-bold text-black/80">15% OFF</h3>
+                        <p class="font-semibold text-black/80">on your next purchase</p>
+                        <p class="text-black/50 text-sm mt-1">use by January 2024</p>
+                    </div>
+                    <img src="./img/cupon-devider.png" class="h-full absolute left-1/2 -ml-4" alt="">
+                    <div class="flex-1 p-10 font-raleway text-right">
+                        <h3 class="sm:text-3xl text-xl font-bold">NEW15</h3>
+                        <p class="text-black/50 sm:text-3xl text-xl text-center">Coupon Code</p>
+                    </div>
+                </div>
+                <div class="bg-couponTwo w-full bg-red-300 rounded-3xl flex relative overflow-hidden h-52 items-center">
+                    <div class="flex-1 p-10 font-inter">
+                        <h3 class="sm:text-4xl text-xl font-bold text-black/80">20% OFF</h3>
+                        <p class="font-semibold text-black/80">on your next purchase</p>
+                        <p class="text-black/50 text-sm mt-1">use by January 2024</p>
+                    </div>
+                    <img src="./img/cupon-devider.png" class="h-full absolute left-1/2 -ml-4" alt="">
+                    <div class="flex-1 p-10 font-raleway text-right">
+                        <h3 class="sm:text-3xl text-xl font-bold">COUPLE20</h3>
+                        <p class="text-black/50 sm:text-3xl text-xl text-center">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button class="border border-primary text-primary font-bold px-8 py-4 rounded-xl hover:bg-primary hover:text-white transition-all">See All Offers</button>
+            </div>
+        </section>
+<!-- seat booking -->
+<section id="paribahan" class="bg-[#F7F8F8] border-t-2 border-primary rounded-t-[60px] pb-24">
+  <div class="container mx-auto px-4 lg:px-24 pt-24">
+    <!-- HEADER -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold mb-4">EasyRide</h2>
+      <p class="text-body max-w-2xl mx-auto">
+        Yes, you can run unit tests and view the results directly within the app.
+      </p>
+    </div>
+    <!--paribahan card-->
+    <div class="bg-white rounded-3xl p-4 mb-8 flex flex-col items-center lg:flex-row gap-8 shadow-sm">
+      <div class="flex-1">
+        <div class="flex justify-between items-center  mb-6">
+          <div class="flex gap-4 items-center">
+            <img src="./img/bus-logo.png" />
+            <div>
+              <h3 class="text-2xl font-bold">EasyRide</h3>
+              <p class="text-body text-sm">Coach-009-WEB | AC-Business</p>
+            </div>
+          </div>
+
+          <div class="bg-[#1DD10026] text-primary px-4 py-2 rounded-xl font-medium">
+            <span id="seatLeft">40 Seats Left</span>
+          </div>
+        </div>
+
+        <div class="bg-[#F7F8F8] rounded-2xl p-6 space-y-4">
+          <div class="flex justify-between border-b border-dashed pb-3">
+            <span class="text-body">Route</span>
+            <span class="font-bold">Dhaka - Sylhet</span>
+          </div>
+          <div class="flex justify-between border-b border-dashed pb-3">
+            <span class="text-body">Departure Time</span>
+            <span class="font-bold">9:00 PM</span>
+          </div>
+          <div class="flex gap-3 flex-wrap">
+            <span class="bg-gray-200 px-3 py-2 rounded-lg text-xs font-bold">Boarding - Laxmipur</span>
+            <span class="bg-gray-200 px-3 py-2 rounded-lg text-xs font-bold">Dropping - Bogura</span>
+            <span class="bg-gray-200 px-3 py-2 rounded-lg text-xs font-bold">Est. Time - 11 Hour</span>
+          </div>
+        </div>
+      </div>
+<div>
+  <img src="./img/info-devider new.png" alt="">
+</div>
+      <div class="flex flex-col justify-center items-center min-w-[200px]">
+        <img src="./img/fare.png" alt="">
+        <h3 class="text-3xl font-bold">550 Tk</h3>
+        <p class="text-body">Per Seat</p>
+      </div>
+    </div>
+
+  <div class="bg-white rounded-3xl p-8 grid grid-cols-1 lg:grid-cols-3 gap-8 shadow-sm">
+
+  <!-- LEFT: Seat Selection -->
+  <div class="lg:col-span-2 border-r-0 lg:border-r-2 border-dashed border-gray-300 pr-0 lg:pr-8">
+    <h3 class="text-2xl font-bold mb-6">Select Your Seat</h3>
+
+    <!-- Legend -->
+    <div class="flex justify-between border-b border-dashed border-gray-300 pb-4 mb-6">
+      <div class="flex gap-2 items-center">
+        <div class="w-4 h-4 bg-green-400 rounded"></div>
+        <span class="font-medium">Available</span>
+      </div>
+      <div class="flex gap-2 items-center">
+        <div class="w-4 h-4 bg-gray-400 rounded"></div>
+        <span class="font-medium">Selected</span>
+      </div>
+    </div>
+
+    <!-- Steering Icon -->
+    <div class="flex justify-end mb-6">
+      <div class="bg-[#0307121A] px-8 py-3 rounded-xl">
+        <img src="https://img.icons8.com/material-sharp/24/steering-wheel.png" class="w-6 h-6 opacity-60"/>
+      </div>
+    </div>
+
+    <!-- Seat Grid -->
+    <p class="mb-4 font-semibold">You selected <span id="seatCount">0</span> seats</p>
+    <div id="seatGrid" class="grid grid-cols-5 gap-3"></div>
+  </div>
+
+  <!-- RIGHT: Summary & Form -->
+  <div class="lg:col-span-1 pl-0 lg:pl-8 mt-6 lg:mt-0">
+    <h3 class="text-2xl font-bold mb-6">Booking Summary</h3>
+    <div class="bg-[#F7F8F8] rounded-xl p-6 mb-6">
+      <!-- Table -->
+      <table class="w-full text-left mb-4 font-inter">
+        <thead class="border-b border-dashed border-gray-300">
+          <tr>
+            <th>Seat <span id="seat-count" class="bg-primary text-white px-2 rounded-md text-xs">0</span></th>
+            <th class="text-center">Class</th>
+            <th class="text-right">Price</th>
+          </tr>
+        </thead>
+        <tbody id="selected-seats-table"></tbody>
+      </table>
+
+      <!-- Price -->
+      <div class="border-t border-gray-300 pt-2 flex justify-between font-bold text-lg mb-4">
+        <span>Total Price</span>
+        <span>BDT <span id="total-price">0</span></span>
+      </div>
+
+      <!-- Discount -->
+      <div id="discount-container" class="hidden flex justify-between font-bold text-lg mb-4 text-primary">
+        <span>Discount</span>
+        <span>BDT <span id="discount-price">0</span></span>
+      </div>
+
+      <!-- Coupon -->
+      <div class="mb-4">
+        <input id="coupon-code" type="text" placeholder="Have a coupon?" class="flex-1 px-4 py-2 rounded-xl border border-gray-300">
+        <button id="apply-btn" class="bg-primary text-white mt-3 font-bold px-5 py-2 rounded-lg disabled:bg-gray-300">Apply</button>
+      </div>
+
+      <!-- Grand Total -->
+      <div class="flex justify-between font-bold text-lg">
+        <span>Grand Total</span>
+        <span>BDT <span id="grand-total">0</span></span>
+      </div>
+    </div>
+
+    <!-- Passenger Info -->
+    <div class="space-y-4">
+      <input id="passenger-name" type="text" placeholder="Passenger Name*" class="w-full p-4 border border-gray-300 rounded-xl">
+      <input id="phone-number" type="number" placeholder="Phone Number*" class="w-full p-4 border border-gray-300 rounded-xl">
+      <input id="email" type="email" placeholder="Email ID" class="w-full p-4 border border-gray-300 rounded-xl">
+      <button id="next-btn" class="w-full bg-primary text-white font-extrabold py-4 rounded-2xl disabled:bg-gray-300 disabled:cursor-not-allowed">Next</button>
+
+      <div class="flex justify-between text-sm underline pt-4">
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Cancellation Policy</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- MODALS -->
+<div id="success-modal" class="fixed inset-0 bg-black/60 hidden justify-center items-center z-50 flex">
+        <div class="bg-white rounded-2xl p-12 text-center max-w-md mx-4 animate-scaleUp">
+            <img src="https://img.icons8.com/color/96/checked--v1.png" class="mx-auto mb-6"/>
+            <h3 class="text-[#27AE60] text-2xl font-bold mb-4 uppercase">Success</h3>
+            <p class="font-bold text-secondary mb-2">Thank you for Booking Our Bus Seats.</p>
+            <p class="text-body text-sm mb-6">We are working hard to find the best service and deals for you. Shortly you will find a confirmation in your email.</p>
+            <button id="continue-btn" class="bg-[#27AE60] text-white font-bold px-12 py-3 rounded-3xl w-full hover:opacity-90 transition-opacity">Continue</button>
+        </div>
+    </div>
+
+<dialog id="bookedModal" class="modal">
+  <div class="modal-box text-center">
+    <h3 class="font-bold text-red-500">Already Selected</h3>
+    <form method="dialog">
+      <button class="btn mt-3">OK</button>
+    </form>
+  </div>
+</dialog>
+<!-- Footer -->
+<footer class="bg-[#030712] text-white py-24 mt-24">
+        <div class="container mx-auto px-4 lg:px-24">
+            <div class="flex flex-col lg:flex-row justify-between items-center border-b border-gray-800 pb-12 mb-8">
+                <div class="mb-8 lg:mb-0 text-center lg:text-left">
+                    <h2 class="text-4xl font-extrabold mb-4">P-Ticket</h2>
+                    <p class="text-white/70 max-w-sm font-inter">P-Ticket is a digital platform to make your daily commuting better.</p>
+                </div>
+                <div class="text-center lg:text-right">
+                    <h4 class="text-xl font-bold mb-4">Download our app</h4>
+                    <div class="border border-white/50 rounded-lg p-2 flex items-center gap-3 cursor-pointer hover:border-primary transition-colors">
+                        <img src="https://img.icons8.com/color/48/google-play.png" alt="Play Store">
+                        <div class="text-left">
+                            <p class="text-[10px] uppercase">Get it on</p>
+                            <h5 class="text-xl font-bold">Google Play</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row justify-between items-center text-white/70 text-sm font-inter">
+                <p>@All rights reserved, P-Ticket services limited 2026 by Sourav Biswas</p>
+                <div class="flex gap-8 mt-4 lg:mt-0">
+                    <a href="#" class="hover:text-primary">Terms & condition</a>
+                    <a href="#" class="hover:text-primary">Return & refund policy</a>
+                    <a href="#" class="hover:text-primary">Privacy policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="style.js"></script>
+</body>
+</html>
