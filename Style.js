@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const rows = ["A","B","C","D","E","F","G","H","I","J"];
 
-  /* ===== Generate Seats ===== */
+  // Generate Seat Grid
   rows.forEach(row => {
     const label = document.createElement("div");
     label.innerText = row;
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ===== Seat Toggle (ONLY ONE FUNCTION) ===== */
+  // Seat Toggle 
   function toggleSeat(seat, btn){
     if(bookedSeats.includes(seat)){
       bookedModal.showModal();
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateUI();
   }
 
-  /* ===== Update UI ===== */
+  // Update UI
   function updateUI(){
     seatCount.innerText = selectedSeats.length;
 
@@ -89,12 +89,12 @@ document.addEventListener("DOMContentLoaded", () => {
       (TOTAL_SEATS - bookedSeats.length - selectedSeats.length) + " Seats Left";
   }
 
-  /* ===== Inputs ===== */
+  // Input
   [nameInput, phoneInput, emailInput].forEach(inp =>
     inp.addEventListener("input", updateUI)
   );
 
-  /* ===== Coupon ===== */
+  // Apply Coupon
   applyBtn.onclick = () => {
     const code = couponInput.value.trim();
 
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Coupon Applied!");
   };
 
-  /* ===== Confirm Booking ===== */
+  // Next Button
   nextBtn.onclick = () => {
     bookedSeats.push(...selectedSeats);
     selectedSeats = [];
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     successModal.classList.remove("modal-open");
   };
 
-  /* ===== Scroll ===== */
+  // Scroll to Bus Section
   busBtn.onclick = () => {
     paribahan.scrollIntoView({ behavior: "smooth" });
   };
