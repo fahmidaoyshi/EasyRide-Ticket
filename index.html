@@ -95,32 +95,61 @@
     </div>
   </section>
 </body>
-  <!-- cards -->
-  <div class="flex flex-col lg:flex-row justify-center absolute left-1/2 -bottom-65 -translate-x-1/2 gap-6 z-20">
-                <div class="bg-white border-b-4 border-green-500 shadow-lg  rounded-3xl p-8 flex items-center gap-4 w-72">
-                     <i class="fa-solid fa-users text-green-500 text-2xl"></i>
-                    <div>
-                        <h3 class="text-4xl font-bold font-inter">500K+</h3>
-                        <p class="text-body">Registered users</p>
-                    </div>
-                </div>
-      <div class="bg-white border-b-4 border-green-500 shadow-lg rounded-3xl p-8 flex items-center gap-4 w-72">
-                    <i class="fa-solid fa-ticket text-green-500 text-2xl"></i>
-                    <div>
-                        <h3 class="text-4xl font-bold font-inter">1.7 lacks</h3>
-                        <p class="text-body">Tickets sold</p>
-                    </div>
-                </div>
-                <div class="bg-white border-b-4 border-green-500 shadow-lg rounded-3xl p-8 flex items-center gap-4 w-72">
-                     <i class="fa-solid fa-bus text-green-500 text-2xl"></i>
-                    <div>
-                        <h3 class="text-4xl font-bold font-inter">80K+</h3>
-                        <p class="text-body">Rental partners</p>
-                    </div>
-                </div>
-            </div>
-</section>
-       <div class="h-35"></div>
+  <!--Cards-->
+<div class="hidden sm:hidden md:flex lg:flex flex-col lg:flex-row justify-center absolute left-1/2 lg:-bottom-70 md:-bottom-125  -translate-x-1/2 gap-6 z-20">
+    <div class="bg-white border-b-4 border-green-500 shadow-lg rounded-3xl p-8 flex items-center gap-4 w-72">
+        <i class="fa-solid fa-users text-green-500 text-2xl"></i>
+        <div>
+            <h3 class="text-4xl font-bold font-inter">500K+</h3>
+            <p class="text-body">Registered users</p>
+        </div>
+    </div>
+
+    <div class="bg-white border-b-4 border-green-500 shadow-lg rounded-3xl p-8 flex items-center gap-4 w-72">
+        <i class="fa-solid fa-ticket text-green-500 text-2xl"></i>
+        <div>
+            <h3 class="text-4xl font-bold font-inter">1.7 lacks</h3>
+            <p class="text-body">Tickets sold</p>
+        </div>
+    </div>
+
+    <div class="bg-white border-b-4 border-green-500 shadow-lg rounded-3xl p-8 flex items-center gap-4 w-72">
+        <i class="fa-solid fa-bus text-green-500 text-2xl"></i>
+        <div>
+            <h3 class="text-4xl font-bold font-inter">80K+</h3>
+            <p class="text-body">Rental partners</p>
+        </div>
+    </div>
+</div>
+
+<!--Small Screen-->
+<div class="flex sm:flex md:hidden lg:hidden flex-col justify-center items-center gap-6 mt-8 px-4">
+    <div class="bg-white border-b-4 border-green-500 shadow-lg rounded-3xl p-6 flex items-center gap-4 w-full max-w-xs">
+        <i class="fa-solid fa-users text-green-500 text-2xl"></i>
+        <div>
+            <h3 class="text-3xl font-bold font-inter">500K+</h3>
+            <p class="text-body">Registered users</p>
+        </div>
+    </div>
+
+    <div class="bg-white border-b-4 border-green-500 shadow-lg rounded-3xl p-6 flex items-center gap-4 w-full max-w-xs">
+        <i class="fa-solid fa-ticket text-green-500 text-2xl"></i>
+        <div>
+            <h3 class="text-3xl font-bold font-inter">1.7 lacks</h3>
+            <p class="text-body">Tickets sold</p>
+        </div>
+    </div>
+
+    <div class="bg-white border-b-4 border-green-500 shadow-lg rounded-3xl p-6 flex items-center gap-4 w-full max-w-xs">
+        <i class="fa-solid fa-bus text-green-500 text-2xl"></i>
+        <div>
+            <h3 class="text-3xl font-bold font-inter">80K+</h3>
+            <p class="text-body">Rental partners</p>
+        </div>
+    </div>
+</div>
+
+       <div class="lg:h-35 h-10 sm:h-90"></div>
 <!-- offer -->
 <section class="container mx-auto px-4 lg:px-24 mb-24">
             <h2 class="text-4xl font-bold text-center mb-12">Best offers for you</h2>
@@ -167,7 +196,7 @@
     <!--paribahan card-->
     <div class="bg-white p-4 mb-4 flex flex-col items-center lg:flex-row gap-8 shadow-sm">
       <div class="flex-1">
-        <div class="flex justify-between items-center  mb-6">
+        <div class="flex sm:flex flex-col md:flex-row justify-between items-center  mb-6">
           <div class="flex gap-4 items-center">
             <img src="./img/bus-logo.png" />
             <div>
@@ -176,7 +205,7 @@
             </div>
           </div>
 
-          <div class="bg-[#1DD10026] text-primary px-4 py-2 rounded-xl font-medium">
+          <div class="bg-[#1DD10026] text-primary px-4 py-2 mt-4 md:mt-0 rounded-xl font-medium">
             <span id="seatLeft">40 Seats Left</span>
           </div>
         </div>
@@ -190,7 +219,7 @@
             <span class="text-body">Departure Time</span>
             <span class="font-bold">9:00 PM</span>
           </div>
-          <div class="flex gap-3 flex-wrap">
+          <div class="flex gap-3 flex-wrap justify-center md:justify-start">
             <span class="bg-gray-200 px-3 py-2 rounded-lg text-xs font-bold">Boarding - Laxmipur</span>
             <span class="bg-gray-200 px-3 py-2 rounded-lg text-xs font-bold">Dropping - Bogura</span>
             <span class="bg-gray-200 px-3 py-2 rounded-lg text-xs font-bold">Est. Time - 11 Hour</span>
@@ -198,7 +227,7 @@
         </div>
       </div>
 <div>
-  <img src="./img/info-devider new.png" alt="">
+  <img class=" hidden lg:block" src="./img/info-devider new.png" alt="">
 </div>
       <div class="flex flex-col justify-center items-center min-w-[200px]">
         <img src="./img/fare.png" alt="">
@@ -269,7 +298,7 @@
           <!-- Coupon -->
           <div class="mb-4">
             <input id="coupon-code" type="text" placeholder="Have a coupon?" class="flex-1 px-4 py-2 rounded-xl border border-gray-300 w-full mb-2">
-            <button id="apply-btn" class="bg-primary text-white font-bold px-5 py-2 rounded-lg w-full disabled:bg-gray-300">Apply Coupon</button>
+            <button id="apply-btn" class="bg-green-400 text-black font-bold px-5 py-2 rounded-lg w-full disabled:bg-gray-300">Apply Coupon</button>
             <p id="coupon-msg" class="text-red-500 text-sm mt-1 hidden"></p>
           </div>
 
@@ -285,7 +314,7 @@
           <input id="passenger-name" type="text" placeholder="Passenger Name*" class="w-full p-4 border border-gray-300 rounded-xl" required>
           <input id="phone-number" type="number" placeholder="Phone Number*" class="w-full p-4 border border-gray-300 rounded-xl" required>
           <input id="email" type="email" placeholder="Email ID" class="w-full p-4 border border-gray-300 rounded-xl">
-          <button id="next-btn" class="w-full bg-primary text-white font-extrabold py-4 rounded-2xl disabled:bg-gray-300 disabled:cursor-not-allowed">Next</button>
+          <button id="next-btn" class="w-full bg-green-400 text-black font-extrabold py-4 rounded-2xl disabled:bg-gray-300 disabled:cursor-not-allowed">Next</button>
           <div class="flex justify-between text-sm underline pt-4">
             <a href="#">Terms and Conditions</a>
             <a href="#">Cancellation Policy</a>
